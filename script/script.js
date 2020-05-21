@@ -6,7 +6,7 @@ const prefixAmp = 463547
 const prefixFb = [462520, 463035, 463055, 463057, 463523, 463524, 463527, 463905, 463211]
 const prefixRlz = 463543
 const prefixCapa = 463552
-const prefixPb = [462101, 463025, 463027, 463122, 463199, 463220, 463223, 463224, 463225, 463235, 463312, 463313, 463321, 464101]
+const prefixPb = [462101, 463021, 463025, 463027, 463122, 463199, 463220, 463223, 463224, 463225, 463235, 463312, 463313, 463321, 464101]
 const prefixPla = [462555, 463555]
 const prefixDvz = [463010, 463536]
 
@@ -22,7 +22,7 @@ function escolher() {
 
         for (let i = 0; i < total_portabilidade; i++) {
             inputs += "<div class='imenda-input' id='input-" + i + "'>" +
-                "<input placeholder='Insira o Terminal' type='text' class='input-tn' id='terminal-" + i +
+                "<input placeholder='Insira o Terminal' type='text' autocomplete='off' class='input-tn' id='terminal-" + i +
                 "'><input class='excluir' type='image' src='img/trash-bin.svg' onClick='excluir(" + i + ")'></div>"
 
         }
