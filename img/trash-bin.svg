@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.644" height="22.696" viewBox="0 0 16.644 22.696">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.436" cy="0.161" r="1.443" gradientTransform="matrix(-1.364, 0, 0, -0.434, 1.03, 0.231)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ed213a"/>
+      <stop offset="1" stop-color="#93291e"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="0.436" cy="0.161" r="0.454" gradientTransform="matrix(-4.333, 0, 0, -1.379, 2.325, 0.383)" xlink:href="#radial-gradient"/>
+    <radialGradient id="radial-gradient-3" cx="0.436" cy="0.161" r="0.454" gradientTransform="matrix(-4.333, 0, 0, -1.379, 2.325, 0.383)" xlink:href="#radial-gradient"/>
+    <radialGradient id="radial-gradient-4" cx="0.436" cy="0.161" r="0.454" gradientTransform="matrix(-4.333, 0, 0, -1.379, 2.325, 0.383)" xlink:href="#radial-gradient"/>
+  </defs>
+  <g id="trash-bin" transform="translate(-10 -2)">
+    <path id="Caminho_3" data-name="Caminho 3" d="M25.887,8.052h-.461L23.985,2.286A.378.378,0,0,0,23.618,2H13.026a.378.378,0,0,0-.367.286L11.218,8.052h-.461A.757.757,0,0,0,10,8.809v1.513a.757.757,0,0,0,.757.757h.4l.717,12.9a.757.757,0,0,0,.757.715H24.016a.757.757,0,0,0,.757-.715l.716-12.9h.4a.757.757,0,0,0,.757-.757V8.809a.757.757,0,0,0-.757-.757Zm-10.97-5.3h6.809V5.783H14.918Zm-1.6,0h.839v3.4a.378.378,0,0,0,.378.378H22.1a.378.378,0,0,0,.378-.378v-3.4h.839l1.324,5.3H12ZM24.016,23.94H12.627l-.715-12.861H24.731Zm1.871-13.618H10.757V8.809H25.887Z" fill="url(#radial-gradient)"/>
+    <path id="Caminho_4" data-name="Caminho 4" d="M29.378,39.835h1.513a.378.378,0,0,0,.378-.378V30.378A.378.378,0,0,0,30.891,30H29.378a.378.378,0,0,0-.378.378v9.078A.378.378,0,0,0,29.378,39.835Zm.378-9.078h.757v8.322h-.757Z" transform="translate(-11.813 -17.408)" fill="url(#radial-gradient-2)"/>
+    <path id="Caminho_5" data-name="Caminho 5" d="M39.378,39.835h1.513a.378.378,0,0,0,.378-.378V30.378A.378.378,0,0,0,40.891,30H39.378a.378.378,0,0,0-.378.378v9.078A.378.378,0,0,0,39.378,39.835Zm.378-9.078h.757v8.322h-.757Z" transform="translate(-18.03 -17.408)" fill="url(#radial-gradient-3)"/>
+    <path id="Caminho_6" data-name="Caminho 6" d="M19.378,39.835h1.513a.378.378,0,0,0,.378-.378V30.378A.378.378,0,0,0,20.891,30H19.378a.378.378,0,0,0-.378.378v9.078A.378.378,0,0,0,19.378,39.835Zm.378-9.078h.757v8.322h-.757Z" transform="translate(-5.596 -17.408)" fill="url(#radial-gradient-4)"/>
+  </g>
+</svg>

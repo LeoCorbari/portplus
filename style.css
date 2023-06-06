@@ -1,0 +1,126 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    
+}
+
+textarea:focus, input:focus, select:focus {
+    border-color: none !important;
+    outline: 0;
+
+}
+
+.titulo {
+    text-align: center;
+    margin-top: 2%;
+    font-size: 35px;
+    margin-bottom: 5%;
+    
+}
+
+.port {
+    color: #ED213A;
+    font-style: bold;
+}
+
+.centro {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.centro-select {
+    position: absolute;
+    top: 35%;
+    width:100%;
+}
+
+.botao-telefone {
+    background-image: linear-gradient(to right, #ED213A, #93291E);
+    padding: 10px;
+    box-shadow: 9px 9px 1px #0000002f;
+    margin-right: 20px;
+    transition: 0.5s;
+}
+
+.botao-telefone:hover {
+    box-shadow: 4px 4px 1px #0000002f;
+}
+
+.botao-csv {
+    background-image: linear-gradient(to right, #38EF7D, #19998E);
+    padding: 10px;
+    box-shadow: 9px 9px 1px #0000002f;
+    transition: 0.5s;
+}
+
+.botao-csv:hover {
+    box-shadow: 4px 4px 1px #0000002f;
+}
+
+.botoes-div {
+    text-align: center;
+    width:100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    float: left;
+}
+
+.input-tn {
+    width: 86%;
+    height: 41px;
+    border: 0; 
+    background-color: #E5E5E5;
+    padding-left: 5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.input-nr {
+    width: 213px;
+    height: 41px;
+    border: 0; 
+    background-color: #E5E5E5;
+    padding-left: 1%;
+    font-family: -apple-system, Roboto, sans-serif;
+}
+
+.rodape {
+    position: absolute;
+    bottom: 0%;
+    width:100%;
+}
+
+.develop {
+    font-style: italic;
+    float: right;
+    margin-right: 1%;
+}
+
+.imagem-texto {
+    text-align: center;
+    width:100%;
+}
+
+.imagem {
+    margin-bottom: 1%;
+}
+
+.imenda {
+    padding-left: 2%;
+    float: left;
+    width: 100%;
+}
+
+.imenda-input {
+    width: 22%;
+    float: left;
+    background-color: #E5E5E5;
+    margin: 1%;
+}
+
+.excluir {
+    margin: -3%;
+}
+
+.erro {
+    border: solid 1px #ED213A
+}
