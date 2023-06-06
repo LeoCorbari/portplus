@@ -71,7 +71,7 @@ function escolher() {
 }
 
 function novo() {
-  window.location.href = "./select_nr.html";
+  window.location.href = "./index.html";
 }
 
 function excluir(id) {
