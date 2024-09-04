@@ -37,6 +37,11 @@ const prefixLjs = 423635;
 const prefixCdq = [423638, 423662, 423682];
 const prefixPho = [423686, 423677, 423665, 423665, 423664];
 
+const prefixRnn = [463550, 463090, 463144, 462033];
+const prefixFsr = [463565, 462019, 463939];
+const prefixSlf = [463564, 462034];
+const prefixMfnp = [463562, 462023];
+
 function escolher() {
   this.total_portabilidade = document.getElementById("total").value;
 
@@ -388,6 +393,62 @@ function gerarRota() {
       csvRota += "\n";
     }
 
+    prefixRnn.forEach((fix) => {
+      if (terminal.substring(0, 6) == fix) {
+        csvRota += "2";
+        csvRota += ";" + "sbcproc01";
+        csvRota += ";" + "RNN";
+        csvRota += ";" + "41539";
+        csvRota += ";" + i_tn;
+        csvRota += ";;" + "normal";
+        csvRota += ";;;" + "50";
+        csvRota += ";" + "Rota  CLIENTE" + ";";
+        csvRota += "\n";
+      }
+    });
+
+    prefixFsr.forEach((fix) => {
+      if (terminal.substring(0, 6) == fix) {
+        csvRota += "2";
+        csvRota += ";" + "sbcproc01";
+        csvRota += ";" + "FSR";
+        csvRota += ";" + "41223";
+        csvRota += ";" + i_tn;
+        csvRota += ";;" + "normal";
+        csvRota += ";;;" + "50";
+        csvRota += ";" + "Rota  CLIENTE" + ";";
+        csvRota += "\n";
+      }
+    });
+
+    prefixSlf.forEach((fix) => {
+      if (terminal.substring(0, 6) == fix) {
+        csvRota += "2";
+        csvRota += ";" + "sbcproc01";
+        csvRota += ";" + "SLF";
+        csvRota += ";" + "41619";
+        csvRota += ";" + i_tn;
+        csvRota += ";;" + "normal";
+        csvRota += ";;;" + "50";
+        csvRota += ";" + "Rota  CLIENTE" + ";";
+        csvRota += "\n";
+      }
+    });
+
+    prefixMfnp.forEach((fix) => {
+      if (terminal.substring(0, 6) == fix) {
+        csvRota += "2";
+        csvRota += ";" + "sbcproc01";
+        csvRota += ";" + "MFNP";
+        csvRota += ";" + "42306";
+        csvRota += ";" + i_tn;
+        csvRota += ";;" + "normal";
+        csvRota += ";;;" + "50";
+        csvRota += ";" + "Rota  CLIENTE" + ";";
+        csvRota += "\n";
+      }
+    });
+
     prefixPho.forEach((fix) => {
       if (terminal.substring(0, 6) == fix) {
         csvRota += "2";
@@ -580,6 +641,54 @@ function gerarRecNum() {
         csvRecNum += ";" + "427";
         csvRecNum += ";" + "41491";
         csvRecNum += ";" + "PHO";
+        csvRecNum += ";" + "55216";
+        csvRecNum += ";" + "190" + ";";
+        csvRecNum += "\n";
+      }
+    });
+
+    prefixRnn.forEach((fix) => {
+      if (terminal.substring(0, 6) == fix) {
+        csvRecNum += ";" + "Renascenca";
+        csvRecNum += ";" + "427";
+        csvRecNum += ";" + "41539";
+        csvRecNum += ";" + "RNN";
+        csvRecNum += ";" + "55216";
+        csvRecNum += ";" + "190" + ";";
+        csvRecNum += "\n";
+      }
+    });
+
+    prefixFsr.forEach((fix) => {
+      if (terminal.substring(0, 6) == fix) {
+        csvRecNum += ";" + "Flor da Serra do Sul";
+        csvRecNum += ";" + "427";
+        csvRecNum += ";" + "41223";
+        csvRecNum += ";" + "FSR";
+        csvRecNum += ";" + "55216";
+        csvRecNum += ";" + "190" + ";";
+        csvRecNum += "\n";
+      }
+    });
+
+    prefixSlf.forEach((fix) => {
+      if (terminal.substring(0, 6) == fix) {
+        csvRecNum += ";" + "Salgado Filho";
+        csvRecNum += ";" + "427";
+        csvRecNum += ";" + "41619";
+        csvRecNum += ";" + "SLF";
+        csvRecNum += ";" + "55216";
+        csvRecNum += ";" + "190" + ";";
+        csvRecNum += "\n";
+      }
+    });
+
+    prefixMfnp.forEach((fix) => {
+      if (terminal.substring(0, 6) == fix) {
+        csvRecNum += ";" + "Manfrinopolis";
+        csvRecNum += ";" + "427";
+        csvRecNum += ";" + "42306";
+        csvRecNum += ";" + "MFNP";
         csvRecNum += ";" + "55216";
         csvRecNum += ";" + "190" + ";";
         csvRecNum += "\n";
