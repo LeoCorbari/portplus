@@ -42,6 +42,11 @@ const prefixFsr = [463565, 462019, 463939];
 const prefixSlf = [463564, 462034];
 const prefixMfnp = [463562, 462023];
 
+const prefixSze = [463542, 462035, 463177]
+const prefixAsd = [443280, 443514, 443642, 443642, 443642, 443642, 443642,
+   443642, 443642, 443642, 443642, 443642, 443911, 442036, 442036, 442036,
+   442036, 442036, 442036, 442036, 442036, 442036, 442036, 443149]
+
 function escolher() {
   this.total_portabilidade = document.getElementById("total").value;
 
@@ -435,6 +440,34 @@ function gerarRota() {
       }
     });
 
+    prefixSze.forEach((fix) => {
+      if (terminal.substring(0, 6) == fix) {
+        csvRota += "2";
+        csvRota += ";" + "sbcproc01";
+        csvRota += ";" + "SZE";
+        csvRota += ";" + "41657";
+        csvRota += ";" + i_tn;
+        csvRota += ";;" + "normal";
+        csvRota += ";;;" + "50";
+        csvRota += ";" + "Rota  CLIENTE" + ";";
+        csvRota += "\n";
+      }
+    });
+
+    prefixAsd.forEach((fix) => {
+      if (terminal.substring(0, 6) == fix) {
+        csvRota += "2";
+        csvRota += ";" + "sbcproc01";
+        csvRota += ";" + "Asd";
+        csvRota += ";" + "41054";
+        csvRota += ";" + i_tn;
+        csvRota += ";;" + "normal";
+        csvRota += ";;;" + "50";
+        csvRota += ";" + "Rota  CLIENTE" + ";";
+        csvRota += "\n";
+      }
+    });
+
     prefixMfnp.forEach((fix) => {
       if (terminal.substring(0, 6) == fix) {
         csvRota += "2";
@@ -677,6 +710,30 @@ function gerarRecNum() {
         csvRecNum += ";" + "427";
         csvRecNum += ";" + "41619";
         csvRecNum += ";" + "SLF";
+        csvRecNum += ";" + "55216";
+        csvRecNum += ";" + "190" + ";";
+        csvRecNum += "\n";
+      }
+    });
+
+    prefixSze.forEach((fix) => {
+      if (terminal.substring(0, 6) == fix) {
+        csvRecNum += ";" + "Santa Izabel do Oeste";
+        csvRecNum += ";" + "427";
+        csvRecNum += ";" + "41657";
+        csvRecNum += ";" + "SZE";
+        csvRecNum += ";" + "55216";
+        csvRecNum += ";" + "190" + ";";
+        csvRecNum += "\n";
+      }
+    });
+
+    prefixAsd.forEach((fix) => {
+      if (terminal.substring(0, 6) == fix) {
+        csvRecNum += ";" + "Assis Chateaubriand";
+        csvRecNum += ";" + "449";
+        csvRecNum += ";" + "41054";
+        csvRecNum += ";" + "ASD";
         csvRecNum += ";" + "55216";
         csvRecNum += ";" + "190" + ";";
         csvRecNum += "\n";
