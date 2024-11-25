@@ -48,6 +48,8 @@ const prefixAsd = [443280, 443514, 443642, 443911, 442036, 443149]
 const prefixCat = [422122, 423310, 423751, 423232, 423233, 423249, 423906, 423125]
 const prefixPdt = [423848, 423080, 423240, 423318,423446, 423908, 423145, 423043]
 
+const prefixCbq = [423231, 423915, 423151]
+
 function escolher() {
   this.total_portabilidade = document.getElementById("total").value;
 
@@ -483,6 +485,20 @@ function gerarRota() {
       }
     });
 
+    prefixCbq.forEach((fix) => {
+      if (terminal.substring(0, 6) == fix) {
+        csvRota += "2";
+        csvRota += ";" + "sbcproc01";
+        csvRota += ";" + "CBQ";
+        csvRota += ";" + "41130";
+        csvRota += ";" + i_tn;
+        csvRota += ";;" + "normal";
+        csvRota += ";;;" + "50";
+        csvRota += ";" + "Rota  CLIENTE" + ";";
+        csvRota += "\n";
+      }
+    });
+
     prefixPdt.forEach((fix) => {
       if (terminal.substring(0, 6) == fix) {
         csvRota += "2";
@@ -787,6 +803,18 @@ function gerarRecNum() {
         csvRecNum += ";" + "424";
         csvRecNum += ";" + "41523";
         csvRecNum += ";" + "PDT";
+        csvRecNum += ";" + "55216";
+        csvRecNum += ";" + "190" + ";";
+        csvRecNum += "\n";
+      }
+    });
+
+    prefixCbq.forEach((fix) => {
+      if (terminal.substring(0, 6) == fix) {
+        csvRecNum += ";" + "Carambei";
+        csvRecNum += ";" + "424";
+        csvRecNum += ";" + "41130";
+        csvRecNum += ";" + "CBQ";
         csvRecNum += ";" + "55216";
         csvRecNum += ";" + "190" + ";";
         csvRecNum += "\n";
