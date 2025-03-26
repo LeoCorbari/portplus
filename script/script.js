@@ -41,6 +41,7 @@ const prefixRnn = [463550, 463090, 463144, 462033];
 const prefixFsr = [463565, 462019, 463939];
 const prefixSlf = [463564, 462034];
 const prefixMfnp = [463562, 462023];
+const prefixStl = [463538, 463016, 463191];
 
 const prefixSze = [463542, 462035, 463177]
 const prefixAsd = [443280, 443514, 443642, 443911, 442036, 443149]
@@ -527,6 +528,20 @@ function gerarRota() {
       }
     });
 
+    prefixStl.forEach((fix) => {
+      if (terminal.substring(0, 6) == fix) {
+        csvRota += "2";
+        csvRota += ";" + "sbcproc01";
+        csvRota += ";" + "STL";
+        csvRota += ";" + "41622";
+        csvRota += ";" + i_tn;
+        csvRota += ";;" + "normal";
+        csvRota += ";;;" + "50";
+        csvRota += ";" + "Rota  CLIENTE" + ";";
+        csvRota += "\n";
+      }
+    });
+
     prefixPho.forEach((fix) => {
       if (terminal.substring(0, 6) == fix) {
         csvRota += "2";
@@ -827,6 +842,18 @@ function gerarRecNum() {
         csvRecNum += ";" + "427";
         csvRecNum += ";" + "42306";
         csvRecNum += ";" + "MFNP";
+        csvRecNum += ";" + "55216";
+        csvRecNum += ";" + "190" + ";";
+        csvRecNum += "\n";
+      }
+    });
+
+    prefixStl.forEach((fix) => {
+      if (terminal.substring(0, 6) == fix) {
+        csvRecNum += ";" + "Salto do Lontra";
+        csvRecNum += ";" + "465";
+        csvRecNum += ";" + "41622";
+        csvRecNum += ";" + "STL";
         csvRecNum += ";" + "55216";
         csvRecNum += ";" + "190" + ";";
         csvRecNum += "\n";
