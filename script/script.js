@@ -51,6 +51,15 @@ const prefixPdt = [423848, 423080, 423240, 423318,423446, 423908, 423145, 423043
 
 const prefixCbq = [423231, 423915, 423151]
 
+const prefixToo = [
+  453320, 453299, 452055, 452103,
+  453373, 453421, 453165, 453536, 453020, 452078, 453252,
+  453277, 453278, 453313, 453378, 453379, 453380, 453903,
+  452035, 453125, 453053, 453054, 453055, 453056, 453057, 453065,
+  454054, 452434, 452470, 452482, 452484, 452488, 452517, 452528, 452554, 452558,
+  454102, 453196]
+
+
 function escolher() {
   this.total_portabilidade = document.getElementById("total").value;
 
@@ -356,6 +365,20 @@ function gerarRota() {
         csvRota += ";" + "sbcproc01";
         csvRota += ";" + "CSC";
         csvRota += ";" + "41135";
+        csvRota += ";" + i_tn;
+        csvRota += ";;" + "normal";
+        csvRota += ";;;" + "50";
+        csvRota += ";" + "Rota  CLIENTE" + ";";
+        csvRota += "\n";
+      }
+    });
+
+    prefixToo.forEach((fix) => {
+      if (terminal.substring(0, 6) == fix) {
+        csvRota += "2";
+        csvRota += ";" + "sbcproc01";
+        csvRota += ";" + "TOO";
+        csvRota += ";" + "41695";
         csvRota += ";" + i_tn;
         csvRota += ";;" + "normal";
         csvRota += ";;;" + "50";
@@ -710,6 +733,18 @@ function gerarRecNum() {
         csvRecNum += ";" + "452";
         csvRecNum += ";" + "41135";
         csvRecNum += ";" + "CSC";
+        csvRecNum += ";" + "55216";
+        csvRecNum += ";" + "190" + ";";
+        csvRecNum += "\n";
+      }
+    });
+
+    prefixToo.forEach((fix) => {
+      if (terminal.substring(0, 6) == fix) {
+        csvRecNum += ";" + "Toledo";
+        csvRecNum += ";" + "452";
+        csvRecNum += ";" + "41695";
+        csvRecNum += ";" + "TOO";
         csvRecNum += ";" + "55216";
         csvRecNum += ";" + "190" + ";";
         csvRecNum += "\n";
