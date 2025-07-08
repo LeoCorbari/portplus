@@ -3,6 +3,7 @@ var posicoes = [];
 var terminais = [];
 
 const prefixAmp = 463547;
+const prefixPbt = [463560, 462029, 462531, 463195];
 const prefixFb = [
   462601, 462520, 463035, 463055, 463057, 463523, 463524, 463527, 463905,
   463211, 463022, 463341, 463520, 463060, 463901, 463197, 463213
@@ -58,7 +59,6 @@ const prefixToo = [
   452035, 453125, 453053, 453054, 453055, 453056, 453057, 453065,
   454054, 452434, 452470, 452482, 452484, 452488, 452517, 452528, 452554, 452558,
   454102, 453196, 453256]
-
 
 function escolher() {
   this.total_portabilidade = document.getElementById("total").value;
@@ -565,6 +565,20 @@ function gerarRota() {
       }
     });
 
+    prefixPbt.forEach((fix) => {
+      if (terminal.substring(0, 6) == fix) {
+        csvRota += "2";
+        csvRota += ";" + "sbcproc01";
+        csvRota += ";" + "PBT";
+        csvRota += ";" + "41487";
+        csvRota += ";" + i_tn;
+        csvRota += ";;" + "normal";
+        csvRota += ";;;" + "50";
+        csvRota += ";" + "Rota  CLIENTE" + ";";
+        csvRota += "\n";
+      }
+    });
+
     prefixPho.forEach((fix) => {
       if (terminal.substring(0, 6) == fix) {
         csvRota += "2";
@@ -598,6 +612,18 @@ function gerarRecNum() {
       csvRecNum += ";" + "190" + ";";
       csvRecNum += "\n";
     }
+
+    prefixPbt.forEach((fix) => {
+      if (terminal.substring(0, 6) == fix) {
+        csvRecNum += ";" + "Pinhal de Sao Bento";
+        csvRecNum += ";" + "465";
+        csvRecNum += ";" + "41487";
+        csvRecNum += ";" + "PBT";
+        csvRecNum += ";" + "55216";
+        csvRecNum += ";" + "190" + ";";
+        csvRecNum += "\n";
+      }
+    });
 
     prefixFb.forEach((fix) => {
       if (terminal.substring(0, 6) == fix) {
